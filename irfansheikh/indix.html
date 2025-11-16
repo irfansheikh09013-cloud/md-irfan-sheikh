@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌟 Computer Lab Resource Feedback System 🚀</title>
+    <link rel="stylesheet" href="style.css" /> 
+</head>
+<body>
+    <div class="container">
+        <h2>🛠️ Computer Lab Resource Feedback System 💻</h2>
+        <p class="subtitle">Help us improve your lab experience by sharing your honest feedback.</p>
+
+        <form id="feedbackForm" action="#" method="POST">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter your full name" required />
+
+            <label for="collegeId">College ID</label>
+            <input type="text" id="collegeId" placeholder="Enter your College/Roll ID (e.g., 2023CS001)" required />
+
+            <label for="department">Department</label>
+            <input type="text" id="department" placeholder="Enter your department (e.g., Computer Science)" required />
+            
+            <label for="dateVisit">Date of Visit</label>
+            <input type="date" id="dateVisit" required />
+
+            <label for="labNumber">Lab Number / Location</label>
+            <input type="text" id="labNumber" placeholder="e.g., Lab 101 or Robotics Lab" required />
+
+            <hr style="margin-top: 30px; border-color: #ced4da;">
+
+            <label>System Availability (Rate 1-5)</label>
+            <div class="rating-group">
+                <div class="rating-item"><input type="radio" id="avail1" name="systemAvailability" value="1" required><label for="avail1">1 (Poor)</label></div>
+                <div class="rating-item"><input type="radio" id="avail2" name="systemAvailability" value="2"><label for="avail2">2</label></div>
+                <div class="rating-item"><input type="radio" id="avail3" name="systemAvailability" value="3"><label for="avail3">3 (Average)</label></div>
+                <div class="rating-item"><input type="radio" id="avail4" name="systemAvailability" value="4"><label for="avail4">4</label></div>
+                <div class="rating-item"><input type="radio" id="avail5" name="systemAvailability" value="5"><label for="avail5">5 (Excellent)</label></div>
+            </div>
+
+            <label for="performance">Computer Speed & Performance</label>
+            <select id="performance" required>
+                <option value="">Select option</option>
+                <option value="Fast">⚡ Fast</option>
+                <option value="Moderate">⏱️ Moderate</option>
+                <option value="Slow">🐢 Slow</option>
+                <option value="Very Slow">🐌 Very Slow</option>
+            </select>
+
+            <label for="softwareAvailability">Was all necessary software readily available?</label>
+            <select id="softwareAvailability" required>
+                <option value="">Select option</option>
+                <option value="All">✅ Yes, all software available</option>
+                <option value="Most">🟡 Most software available</option>
+                <option value="Some Missing">❌ Some crucial software was missing</option>
+                <option value="Many Missing">⛔ Many software missing</option>
+            </select>
+
+            <label>Network & Internet Speed (Rate 1-5)</label>
+            <div class="rating-group">
+                <div class="rating-item"><input type="radio" id="net1" name="internetSpeed" value="1" required><label for="net1">1 (Very Slow)</label></div>
+                <div class="rating-item"><input type="radio" id="net2" name="internetSpeed" value="2"><label for="net2">2</label></div>
+                <div class="rating-item"><input type="radio" id="net3" name="internetSpeed" value="3"><label for="net3">3 (Average)</label></div>
+                <div class="rating-item"><input type="radio" id="net4" name="internetSpeed" value="4"><label for="net4">4</label></div>
+                <div class="rating-item"><input type="radio" id="net5" name="internetSpeed" value="5"><label for="net5">5 (Lightning Fast)</label></div>
+            </div>
+
+            <label for="support">Instructor / Lab Assistant Support</label>
+            <select id="support" required>
+                <option value="">Select option</option>
+                <option value="Very Helpful">😇 Very Helpful & Knowledgeable</option>
+                <option value="Helpful">👍 Helpful</option>
+                <option value="Less Helpful">👎 Less Helpful</option>
+                <option value="Not Helpful">😠 Not Helpful at all</option>
+            </select>
+            
+            <label for="environment">Lab Cleanliness & Environment</label>
+            <select id="environment" required>
+                <option value="">Select option</option>
+                <option value="Very Clean">✨ Spotless</option>
+                <option value="Clean">👍 Clean</option>
+                <option value="Average">😐 Average</option>
+                <option value="Needs Improvement">🗑️ Needs Improvement</option>
+            </select>
+
+            <hr style="margin-top: 30px; border-color: #ced4da;">
+            
+            <label for="techIssues">🚨 Any Technical Issues You Faced?</label>
+            <textarea id="techIssues" placeholder="Describe any issues like PC not working, login error, software crash, slow internet, etc... (Mandatory if you rated 1 or 2 above)"></textarea>
+
+            <label for="suggestions">🚀 What is the ONE main suggestion to improve the lab?</label>
+            <textarea id="suggestions" placeholder="Share your best idea to make this lab excellent."></textarea>
+
+            <button type="submit" class="submit-btn">✅ Submit Your Valuable Feedback</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            alert('Thank you! Your valuable feedback has been submitted successfully.'); 
+            this.reset(); // फॉर्म सबमिट के बाद खाली कर देता है
+        });
+    </script>
+</body>
+</html>
